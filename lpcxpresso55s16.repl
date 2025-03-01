@@ -79,7 +79,7 @@ syscon: Python.PythonPeripheral @ sysbus 0x40000000
     size: 0x1000
     script: "request.value = {0x264: 0x3, 0x284: 0x3, 0x2B0: 0x4, 0x320: 0xFF, 0x3A0: 0xFF, 0xA18: 0xFF}.get(request.offset, 0x0)"
 
-flexcomm0: UART.LPC_USART @ sysbus 0x40086000
+flexcomm0: UART.LPC_USART_Fix @ sysbus 0x40086000
     ->nvic0@14
 
 // cortex-m overlay

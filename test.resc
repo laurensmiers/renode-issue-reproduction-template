@@ -7,6 +7,9 @@ $name?="LPCXpresso55S16"
 
 using sysbus
 mach create $name
+
+include $ORIGIN/LPC_USART_Fix.cs
+
 machine LoadPlatformDescription $ORIGIN/lpcxpresso55s16.repl
 
 $bin?=$ORIGIN/artifacts/lpcxpresso55s16_usart_interrupt_transfer.axf
